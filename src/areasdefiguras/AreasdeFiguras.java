@@ -23,6 +23,7 @@ public class AreasdeFiguras {
         System.out.println("1. Cuadrado");
         System.out.println("2. Rectangulo");
         System.out.println("3. Triangulo");
+        System.out.println("4. Circulo");
         int opcion = sc.nextInt();
         System.out.print("ingrese el primer punto (x,y) con un espacio: ");
         int x1 = sc.nextInt();
@@ -38,9 +39,12 @@ public class AreasdeFiguras {
             case 2:
                 f = new Rectangulo();
                 break;
-            default:
+            case 3:
                 f = new Triangulo();
                 break;
+            default:
+                f = new Circulo();
+                break;   
         }
         f.getPuntos(x1,y1,x2,y2);
         f.calcular();
