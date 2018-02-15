@@ -24,9 +24,10 @@ public class AreasdeFiguras {
         System.out.println("2. Rectangulo");
         System.out.println("3. Triangulo");
         int opcion = sc.nextInt();
-        System.out.print("ingrese los puntos: ");
+        System.out.print("ingrese el primer punto (x,y) con un espacio: ");
         int x1 = sc.nextInt();
         int y1 = sc.nextInt();
+        System.out.print("ingrese el Segunto punto (x,y) con un espacio: ");
         int x2 = sc.nextInt();
         int y2 = sc.nextInt();
         Figura f;
@@ -34,10 +35,12 @@ public class AreasdeFiguras {
             case 1:
                 f = new Cuadrado();
                 break;
-            default:
+            case 2:
                 f = new Rectangulo();
                 break;
-             
+            default:
+                f = new Triangulo();
+                break;
         }
         f.getPuntos(x1,y1,x2,y2);
         f.calcular();
