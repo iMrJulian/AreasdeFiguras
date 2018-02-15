@@ -12,12 +12,16 @@ package Figura;
 public class Rectangulo extends Figura{
     @Override
     public void calcular(){
-    int l;
-        if (y1>y2)
-            l=y2-y1;
-        else
-            l=x2-x1;
-    System.out.println("El area es "+l*l);
+    int h,b,a;
+        if (y1>y2){
+            h=y1-y2;
+            b=x2-x1;
+        }else{
+            h=y2-y1;
+            b=x2-x1;
+        }
+    a=b*h; 
+    System.out.println("El area es "+a);
     }
    
     
