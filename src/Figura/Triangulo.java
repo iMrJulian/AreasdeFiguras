@@ -17,7 +17,7 @@ public class Triangulo extends Figura{
             h = this.p1.y-this.p2.y;
         
         else
-            h = this.p1.y-this.p2.y;
+            h = this.p2.y-this.p1.y;
         
         if (this.p1.x>this.p2.x)
             b = this.p1.x-this.p2.x;

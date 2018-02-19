@@ -13,7 +13,7 @@ public class Circulo extends Figura{
      @Override
      public void calcularA() {
         double r = this.p1.calcularDistancia(this.p2);
-        this.a = Math.PI * r;
+        this.a = Math.PI * r*r;
     }
      
     @Override
