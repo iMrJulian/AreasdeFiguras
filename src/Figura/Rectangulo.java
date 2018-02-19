@@ -11,18 +11,19 @@ package Figura;
  */
 public class Rectangulo extends Figura{
     @Override
-    public void calcular(){
-    int h,b,a;
-        if (y1>y2){
-            h=y1-y2;
-            b=x2-x1;
-        }else{
-            h=y2-y1;
-            b=x2-x1;
-        }
-    a=b*h; 
-    System.out.println("El area es "+a);
+     public void calcularA() {
+        double h = this.p1.y-this.p2.y;
+        double b = this.p2.x-this.p1.x;
+        a = h * b;
+        
     }
    
+    @Override
+    public void calcularP() {
+        double h = this.p1.y-this.p2.y;
+        double b = this.p2.x-this.p1.x;
+        this.p = 2*h+2*b;
+    }
+    
     
 }

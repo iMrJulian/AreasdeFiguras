@@ -11,16 +11,19 @@ package Figura;
  */
 public class Triangulo extends Figura{
     @Override
-    public void calcular(){
-    int h,b,a;
-        if (y1>y2){
-            h=y1-y2;
-            b=x2-x1;
-        }else{
-            h=y2-y1;
-            b=x2-x1;
-        }
-    a=(b*h)/2; 
-    System.out.println("El area es "+a);
+     public void calcularA() {
+        double h = this.p1.y-this.p2.y;
+        double b = this.p2.x-this.p1.x;
+        a = (h * b)/2;
+        
     }
+   
+    @Override
+    public void calcularP() {
+        double d = this.p1.calcularDistancia(this.p2);
+        double h = this.p1.y-this.p2.y;
+        double b = this.p2.x-this.p1.x;
+        this.p = d+h+b;
+    }
+    
 }

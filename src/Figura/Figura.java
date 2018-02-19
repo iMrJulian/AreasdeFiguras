@@ -10,14 +10,28 @@ package Figura;
  * @author david
  */
 public abstract class Figura {
-    int x1,x2,y1,y2;
+    double a,p;
+  
+    public Punto p1;
+    public Punto p2;
     
-    public void getPuntos(int x1,int y1,int x2,int y2) {
-        this.x1 = x1;
-        this.y1 = y1;
-        this.x2 = x2;
-        this.y2 = y2;
+    public void setP1(Punto p1) {
+        this.p1 = p1;
+    }
+
+    public void setP2(Punto p2) {
+        this.p2 = p2;
+    }
+
+    public double getA() {
+        return a;
+    }
+
+    public double getP() {
+        return p;
     }
     
-    public abstract void calcular();
+    public abstract void calcularA();
+    
+    public abstract void calcularP();
 }

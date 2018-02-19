@@ -11,15 +11,15 @@ package Figura;
  */
 public class Cuadrado extends Figura{
     @Override
-    public void calcular(){
-    int l,r;
-        if (x1==x2)
-            l=y2-y1;
-        else
-            l=x2-x1;
-    r=l*l;
-    System.out.println("El area es "+r);
+     public void calcularA() {
+        double l = this.p1.calcularDistancia(this.p2);
+        this.a = l * l;
     }
-   
+     
+    @Override
+    public void calcularP() {
+        double l = this.p1.calcularDistancia(this.p2);
+        this.p = l * 4;
+    }
     
 }
