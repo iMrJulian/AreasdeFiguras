@@ -12,16 +12,38 @@ package Figura;
 public class Rectangulo extends Figura{
     @Override
      public void calcularA() {
-        double h = this.p1.y-this.p2.y;
-        double b = this.p2.x-this.p1.x;
+        double h,b;
+        if (this.p1.y>this.p2.y)
+            h = this.p1.y-this.p2.y;
+        
+        else
+            h = this.p2.y-this.p1.y;
+        
+        if (this.p1.x>this.p2.x)
+            b = this.p1.x-this.p2.x;
+        
+        else
+            b = this.p2.x-this.p1.x;
+        
         a = h * b;
         
     }
    
     @Override
     public void calcularP() {
-        double h = this.p1.y-this.p2.y;
-        double b = this.p2.x-this.p1.x;
+        double h,b;
+        if (this.p1.y>this.p2.y)
+            h = this.p1.y-this.p2.y;
+        
+        else
+            h = this.p2.y-this.p1.y;
+        
+        if (this.p1.x>this.p2.x)
+            b = this.p1.x-this.p2.x;
+        
+        else
+            b = this.p2.x-this.p1.x;
+        
         this.p = 2*h+2*b;
     }
     
